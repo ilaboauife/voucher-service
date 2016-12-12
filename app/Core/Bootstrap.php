@@ -10,12 +10,12 @@
 namespace App\Core;
 
 
-class App
+class Bootstrap
 {
     /**
      * Initialize the Application Framework
      */
-    public static function init()
+    public static function init() : void
     {
         echo 'Initializing';
     }

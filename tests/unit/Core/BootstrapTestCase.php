@@ -1,6 +1,6 @@
 <?php
 /**
- * Unit Test for the App class
+ * Unit Test for the Bootstrap class
  *
  * Author: Perfect Makanju<damiperfect@gmail.com>
  * Date: 12/9/16
@@ -12,7 +12,7 @@ namespace UnitTest\Core;
 
 use UnitTest\BaseTestCase;
 
-class AppTestCase extends BaseTestCase
+class BootstrapTestCase extends BaseTestCase
 {
-
+    //TODO
 }
