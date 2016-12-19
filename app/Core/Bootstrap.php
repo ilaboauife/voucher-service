@@ -15,8 +15,8 @@ class Bootstrap
     /**
      * Initialize the Application Framework
      */
-    public static function init() : void
+    public static function init() : string
     {
-        echo 'Initializing';
+        return 'Initializing';
     }
 }

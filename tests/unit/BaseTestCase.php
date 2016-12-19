@@ -10,7 +10,9 @@
 namespace UnitTest;
 
 
-class BaseTestCase
+use PHPUnit\Framework\TestCase;
+
+class BaseTestCase extends TestCase
 {
 
 }
