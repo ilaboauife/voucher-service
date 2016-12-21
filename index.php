@@ -2,4 +2,4 @@
 
 require(__DIR__ . '/vendor/autoload.php');
 
-App\Core\Bootstrap::init();
+echo App\Core\Bootstrap::init(Dispatcher::getDefault());
