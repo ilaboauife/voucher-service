@@ -16,7 +16,7 @@ use UnitTest\BaseTestCase;
 class DispatcherTest extends BaseTestCase
 {
 
-    public function test_GetDefault_Returns_Valid_Dispatcher(){
+    public function test_GetDefault_Returns_Valid_Dispatcher() {
         $this->assertInstanceOf(Dispatcher::class, Dispatcher::getDefault());
     }
 }

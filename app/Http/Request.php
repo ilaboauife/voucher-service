@@ -19,8 +19,7 @@ class Request implements IRequest
      * Builds a requests from the global request parameters
      *
      */
-    public static function parseRequest() : Request
-    {
+    public static function parseRequest() : Request {
         return new Request();
     }
 }

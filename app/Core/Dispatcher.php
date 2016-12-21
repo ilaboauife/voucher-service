@@ -20,12 +20,17 @@ class Dispatcher
      *
      * @return Dispatcher
      */
-    public static function getDefault() : Dispatcher
-    {
+    public static function getDefault() : Dispatcher {
         return new Dispatcher();
     }
 
-    public function dispatch(IRequest $request, Router $router){
+    /**
+     * Dispatches the request to the $router callback.
+     *
+     * @param IRequest $request
+     * @param Router $router
+     */
+    public function dispatch(IRequest $request, Router $router) {
 
     }
 }

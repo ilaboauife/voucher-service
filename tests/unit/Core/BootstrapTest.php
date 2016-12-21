@@ -9,6 +9,7 @@
 
 namespace UnitTest\Core;
 
+use \Mockery as m;
 
 use App\Core\Bootstrap;
 use App\Core\Dispatcher;
@@ -16,7 +17,15 @@ use UnitTest\BaseTestCase;
 
 class BootstrapTest extends BaseTestCase
 {
-    public function test_Init_ReturnsCorrectOutput(){
-        $this->assertEquals('Initializing', Bootstrap::init());
+
+    protected function tearDown() {
+        \Mockery::close();
+    }
+
+    public function test_Init_ReturnsCorrectOutput() {
+        $dispatcher = m::mock(Dispatcher::class);
+        $dispatcher->shouldReceive('dispatch')->once();
+
+        $this->assertEquals('Initializing', Bootstrap::init($dispatcher));
     }
 }

@@ -19,8 +19,7 @@ class Bootstrap
      * @param Dispatcher|null $dispatcher
      * @return string
      */
-    public static function init(?Dispatcher $dispatcher) : string
-    {
+    public static function init(Dispatcher $dispatcher) : string {
         //parse requests
         $request = Request::parseRequest();
 
