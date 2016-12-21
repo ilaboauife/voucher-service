@@ -10,9 +10,12 @@
 namespace UnitTest\Core;
 
 
+use App\Core\Bootstrap;
 use UnitTest\BaseTestCase;
 
-class BootstrapTestCase extends BaseTestCase
+class BootstrapTest extends BaseTestCase
 {
-    //TODO
+    public function test_Init_ReturnsCorrectOutput() {
+        $this->assertEquals('Initializing', Bootstrap::init());
+    }
 }
