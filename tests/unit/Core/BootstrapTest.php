@@ -13,7 +13,7 @@ use \Mockery as m;
 
 use App\Core\Bootstrap;
 use App\Core\Dispatcher;
-use UnitTest\BaseTestCase;
+use Unit\Test\BaseTestCase;
 
 class BootstrapTest extends BaseTestCase
 {
