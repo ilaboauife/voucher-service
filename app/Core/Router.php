@@ -28,6 +28,15 @@ class Router{
      */
     protected $action = '';
 
+    private const GET = 'get';
+
+    private const POST = 'post';
+
+    private const DELETE = 'delete';
+
+    private const PATCH = 'patch';
+
+
     private static $routerInstance = null;
 
     private function __construct() {
@@ -50,7 +59,7 @@ class Router{
      * @param string action
      */
     public function get($url, $action){
-        $this->addRoute('Get', $url, $action);
+        $this->addRoute(GET, $url, $action);
     }   
 
     /**
@@ -60,7 +69,7 @@ class Router{
      * @param string action
      */
     public function post($url, $action){
-        $this->addRoute('Post', $url, $action);
+        $this->addRoute(POST, $url, $action);
     }   
 
 
@@ -71,7 +80,7 @@ class Router{
      * @param string action
      */
     public function delete($url, $action){
-        $this->addRoute('Delete', $url, $action);
+        $this->addRoute(DELETE, $url, $action);
     }   
 
     /**
@@ -81,7 +90,7 @@ class Router{
      * @param string action
      */
     public function patch($url, $action){
-        $this->addRoute('Patch', $url, $action);
+        $this->addRoute(PATCH, $url, $action);
     }
 
     /**
