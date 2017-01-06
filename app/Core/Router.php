@@ -16,7 +16,7 @@ class Router{
     /**
      * Stores registered routes
      */
-    protected $routes = [];
+    public $routes = [];
 
     /**
      *current url
@@ -59,7 +59,7 @@ class Router{
      * @param string action
      */
     public function get($url, $action){
-        $this->addRoute(self::GET, $url, $action);
+        $this->addRoute($url, $action, self::GET);
     }   
 
     /**
@@ -69,7 +69,7 @@ class Router{
      * @param string action
      */
     public function post($url, $action){
-        $this->addRoute(self::POST, $url, $action);
+        $this->addRoute($url, $action, self::POST);
     }   
 
 
@@ -80,7 +80,7 @@ class Router{
      * @param string action
      */
     public function delete($url, $action){
-        $this->addRoute(self::DELETE, $url, $action);
+        $this->addRoute($url, $action, self::DELETE);
     }   
 
     /**
@@ -90,7 +90,7 @@ class Router{
      * @param string action
      */
     public function patch($url, $action){
-        $this->addRoute(self::PATCH, $url, $action);
+        $this->addRoute($url, $action, self::PATCH);
     }
 
     /**
@@ -100,7 +100,7 @@ class Router{
      * @param string url
      * @param string action
      */
-    protected function addRoute($request_type=self::GET, $url, $action){
+    public function addRoute($url, $action, $request_type=self::GET){
         $this->routes[] = ['request_type'=>$request_type, 'url'=>$url, 'action'=>$action];
     }
 
