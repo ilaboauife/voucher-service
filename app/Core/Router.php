@@ -39,7 +39,7 @@ class Router{
 
     private static $routerInstance = null;
 
-    private function __construct() {
+    public function __construct() {
         //
     }
     
@@ -59,7 +59,7 @@ class Router{
      * @param string action
      */
     public function get($url, $action){
-        $this->addRoute(GET, $url, $action);
+        $this->addRoute(self::GET, $url, $action);
     }   
 
     /**
@@ -69,7 +69,7 @@ class Router{
      * @param string action
      */
     public function post($url, $action){
-        $this->addRoute(POST, $url, $action);
+        $this->addRoute(self::POST, $url, $action);
     }   
 
 
@@ -80,7 +80,7 @@ class Router{
      * @param string action
      */
     public function delete($url, $action){
-        $this->addRoute(DELETE, $url, $action);
+        $this->addRoute(self::DELETE, $url, $action);
     }   
 
     /**
@@ -90,7 +90,7 @@ class Router{
      * @param string action
      */
     public function patch($url, $action){
-        $this->addRoute(PATCH, $url, $action);
+        $this->addRoute(self::PATCH, $url, $action);
     }
 
     /**
@@ -100,8 +100,17 @@ class Router{
      * @param string url
      * @param string action
      */
-    protected function addRoute($request_type='Get', $url, $action){
+    protected function addRoute($request_type=self::GET, $url, $action){
         $this->routes[] = ['request_type'=>$request_type, 'url'=>$url, 'action'=>$action];
+    }
+
+    /**
+     * Returns an array of all registered routes
+     *
+     *@return array routes
+     */
+    public function getRoutes(){
+        return $this->routes;
     }
 
     /**
