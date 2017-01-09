@@ -11,8 +11,7 @@ namespace UnitTest\Core;
 
 use \Mockery as m;
 
-use App\Core\Bootstrap;
-use App\Core\Dispatcher;
+use App\Core\{Bootstrap, Dispatcher};
 use UnitTest\BaseTestCase;
 
 class BootstrapTest extends BaseTestCase
