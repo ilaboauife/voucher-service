@@ -4,6 +4,6 @@ php:
   - 7.0
   - hhvm
   
-install: php vendor/autoload.php
+install: composer install
 
 
